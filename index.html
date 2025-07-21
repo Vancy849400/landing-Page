@@ -12,6 +12,34 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    .mynav {
+      width: 0;
+      background-color: #111;
+      z-index: 1;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding-top: 5rem;
+      transition: 0.5s;
+      overflow-x: hidden;
+    }
+    .mynav a {
+      display: block;
+      font-size: 25px;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: #818181;
+      transition: 0.3s;
+      text-align: center;
+      line-height: 2;
+    }
+
+    .mynav a:hover {
+      color: #f1f1f1;
+    }
+  </style>
   <body>
     <header>
       <div class="container">
@@ -22,13 +50,13 @@
             <li><a href="#services">services</a></li>
             <li><a href="#contact">contact us</a></li>
           </ul>
-          <h1 class="menu">
+          <h1 class="menu" id="menu" onclick="opennav()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              fill="#ffffff"
+              fill="#fff"
             >
               <path
                 d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
@@ -52,6 +80,26 @@
       </div>
     </header>
     <!-- HEADER ENDS -->
+    <!-- MOBILE MENU START -->
+    <div id="mynav" class="mynav">
+      <a
+        href="javascript:void(0)"
+        id="closebtn"
+        onclick="closebtn()"
+        style="
+          font-size: 30px;
+          position: absolute;
+          top: 5px;
+          right: 0;
+          margin-right: 10px;
+        "
+        >&times;</a
+      >
+      <a href="#about">about</a>
+      <a href="#services">services</a>
+      <a href="#contact">contact us</a>
+    </div>
+    <!-- MOBILE MENU ENDS -->
     <!-- MAIN STARTS -->
     <main class="information" id="about">
       <div class="container">
@@ -117,5 +165,6 @@
         </div>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

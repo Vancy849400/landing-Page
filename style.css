@@ -207,6 +207,12 @@ footer {
 }
 
 @media (max-width: 645px) {
+
+.sidenav {padding-top: 15px;}
+.sidenav a {
+  font-size: 18px;
+}
+
   header {
     padding-bottom: 20px;
     height: 750px;
